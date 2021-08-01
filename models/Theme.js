@@ -6,8 +6,8 @@ class Theme{
     static locationF = 't-3'
     static locationH = 't-4'
 
-    theme = []
-    
+    themes = []
+
     async getThemes(){
         let names = `${Theme.locationA},${Theme.locationE},${Theme.locationF},${Theme.locationH}`
         this.themes = await Http.request({
