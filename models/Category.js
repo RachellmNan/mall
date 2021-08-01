@@ -1,7 +1,7 @@
 const { Http } = require("../utils/http")
 
 class Category{
-    static getGridCategoryC(){
+    static getCategoryC(){
         return Http.request({
             url:'/v1/category/grid/all'
         })
