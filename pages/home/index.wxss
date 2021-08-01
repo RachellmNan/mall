@@ -1,1 +1,29 @@
-/* pages/home/index.wxss */
+page {
+  background-color: #F5F5F5;
+}
+
+.container .themeA {
+  height: 260rpx;
+}
+
+.container .themeA image {
+  height: 100%;
+  width: 100%;
+}
+
+.container .bannerB {
+  height: 360rpx;
+}
+
+.container .bannerB .swiper {
+  height: 360rpx;
+}
+
+.container .bannerB .swiper image {
+  width: 100%;
+}
+
+.container .gridC {
+  padding: 10rpx;
+  background-color: #fff;
+}

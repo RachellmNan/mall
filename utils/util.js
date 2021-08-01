@@ -14,6 +14,24 @@ const formatNumber = n => {
   return n[1] ? n : `0${n}`
 }
 
+function promiseic(fn){
+  return function(params){
+    return new Promise((resolve, reject)=>{
+      let obj = Object.assign(params, {
+        success(res){
+          resolve(res)
+        },
+        fail(err){
+          reject(err)
+        }
+      })
+      fn(obj)
+    })
+  }
+}
+
+
 module.exports = {
-  formatTime
+  formatTime,
+  promiseic
 }

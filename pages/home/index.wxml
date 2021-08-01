@@ -1,4 +1,15 @@
-<view class="home">
-    <image  />
-    <view >sss</view>
+<view class="container">
+    <view class="themeA">
+        <image src="{{themeA.entrance_img}}" />
+    </view>
+    <view class="bannerB">
+        <swiper class="swiper" indicator-dots indicator-color indicator-color="rgb(193,193,193)" indicator-active-color="#157658" autoplay circular>
+            <swiper-item wx:for="{{bannerB}}" wx:key="item" >
+                <image src="{{item.img}}" />
+            </swiper-item>
+        </swiper>
+    </view>
+    <view class="gridC">
+        <m-grid grid="{{gridC}}"></m-grid>
+    </view>
 </view>

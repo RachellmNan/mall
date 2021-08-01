@@ -1,0 +1,27 @@
+page{
+    background-color: #F5F5F5;
+}
+.container{
+    
+    .themeA{
+        height: 260rpx;
+        image{
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .bannerB{
+        height: 360rpx;
+        .swiper{
+            height: 360rpx;
+            image{
+                // height: 100%;
+                width: 100%;
+            }
+        }
+    }
+    .gridC{
+        padding: 10rpx;
+        background-color: #fff;
+    }
+}
