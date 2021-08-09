@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "m-grid": "/components/grid/grid"
+    "m-grid": "/components/grid/grid",
+    "m-weekly": "/components/weekly/index"
   }
 }

@@ -3,7 +3,7 @@
         <image src="{{themeA.entrance_img}}" />
     </view>
     <view class="bannerB">
-        <swiper class="swiper" indicator-dots indicator-color indicator-color="rgb(193,193,193)" indicator-active-color="#157658" autoplay circular>
+        <swiper class="swiper" indicator-dots  indicator-color="rgb(193,193,193)" indicator-active-color="#157658" autoplay circular>
             <swiper-item wx:for="{{bannerB}}" wx:key="item" >
                 <image src="{{item.img}}" />
             </swiper-item>
@@ -11,5 +11,11 @@
     </view>
     <view class="gridC">
         <m-grid grid="{{gridC}}"></m-grid>
+    </view>
+    <view class="activityD">
+        <image  src="{{activityD.entrance_img}}"/>
+    </view>
+    <view class="themeE">
+        <m-weekly img="{{themeE.title_img}}" list="{{themeESpu}}"></m-weekly>
     </view>
 </view>

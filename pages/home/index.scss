@@ -11,17 +11,28 @@ page{
         }
     }
     .bannerB{
-        height: 360rpx;
         .swiper{
             height: 360rpx;
             image{
-                // height: 100%;
                 width: 100%;
             }
         }
     }
     .gridC{
         padding: 10rpx;
+        margin-bottom: 20rpx;
+        background-color: #fff;
+    }
+    .activityD{
+        height: 300rpx;
+        margin-bottom: 20rpx;
+        image{
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .themeE{
+        padding: 44rpx 30rpx 34rpx;
         background-color: #fff;
     }
 }

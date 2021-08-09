@@ -1,0 +1,12 @@
+<view class="weekly">
+    <image src="{{img}}" mode="heightFix"/>
+    <scroll-view scroll-x >
+       <view class="list-wrapper">
+            <view class="list" wx:for="{{list}}" wx:key="item">
+                <image src="{{item.img}}" />
+                <text class="title">{{item.title}}</text>
+                <text class="price">{{item.price}}</text>
+            </view>
+        </view>
+    </scroll-view>
+</view>
