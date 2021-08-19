@@ -1,5 +1,5 @@
 <view class="grid">
-    <view class="grid-item" wx:for="{{grid}}" wx:key="item">
+    <view class="grid-item" wx:for="{{list}}" wx:key="item">
         <view class="detail">
              <image src="{{item.img}}"  mode="widthFix"/>
             <text >{{item.title}}</text>

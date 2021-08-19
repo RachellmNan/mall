@@ -1,0 +1,9 @@
+<view class="picture-grid">
+    <view class="left flex">
+        <image  src="{{left.img}}" mode="widthFix"/>
+    </view>
+    <view class="right flex">
+        <image  src="{{rightTop.img}}" mode="widthFix"/>
+        <image  src="{{rightBottom.img}}" mode="widthFix"/>
+    </view>
+</view>

@@ -1,6 +1,6 @@
 <view class="container">
     <view class="themeA">
-        <image src="{{themeA.entrance_img}}" />
+        <image src="{{themeA.entrance_img}}" mode="widthFix"/>
     </view>
     <view class="bannerB">
         <swiper class="swiper" indicator-dots  indicator-color="rgb(193,193,193)" indicator-active-color="#157658" autoplay circular>
@@ -16,6 +16,25 @@
         <image  src="{{activityD.entrance_img}}"/>
     </view>
     <view class="themeE">
-        <m-weekly img="{{themeE.title_img}}" list="{{themeESpu}}"></m-weekly>
+        <m-weekly img="{{themeE.title_img}}" list="{{themeESpu}}" ></m-weekly>
+    </view>
+    <view class="themeF">
+        <image src="{{themeF.entrance_img}}" mode="widthFix"/>
+    </view>
+    <view class="bannerG">
+        <view class="top">
+            <image class="top-img"  src="{{bannerG.img}}" mode="widthFix"/>
+        </view>
+        <m-picture-grid list="{{bannerG.items}}"/>
+    </view>
+    <view class="themeH">
+        <image src="{{themeH.entrance_img}}" mode="widthFix" />
+    </view>
+    <view class="bottomSpu">
+        <image class="re_img" src="/assets/imgs/recommend.png" mode="widthFix"/>
+        <m-water-flow list="{{waterFlow}}"/>
+        <view wx:if="{{!moreData}}" class="tip">
+            <text >~~~~没有更多数据了~~~~</text>
+        </view>
     </view>
 </view>

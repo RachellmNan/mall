@@ -1,0 +1,28 @@
+.container{
+    box-shadow: 0px 0px 12px 0px rgba(221, 221, 221, 0.5);
+    image{
+        width: 100%;
+    }
+    .content{
+        padding: 22rpx 0 0 16rpx;
+        font-family: Helvetica;
+        .title{
+            color: #333;
+            font-size: 28rpx;
+            line-height: 34rpx;
+            margin-bottom: 16rpx;
+        }
+        .price{
+            font-size: 32rpx;
+            color: #157658;
+            line-height: 38rpx;
+            
+        }
+        .desc{
+            margin-top: 6rpx;
+            color: #999;
+            line-height: 34rpx;
+            font-size: 24rpx;
+        }
+    }
+}

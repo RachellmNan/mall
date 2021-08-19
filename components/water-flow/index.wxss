@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.flex-box {
+  display: flex;
+  flex-direction: column;
+  width: 340rpx;
+}
+
+m-water-flow-item {
+  margin-bottom: 30rpx;
+}

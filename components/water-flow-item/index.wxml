@@ -1,0 +1,12 @@
+<view class="container">
+    <image src="{{img}}" mode="widthFix" />
+    <view class="content">
+        <view class="title">
+            <text >{{title}}</text>
+        </view>
+        <text class="price">¥ {{price}}</text>
+        <view class="desc">
+            <text>{{desc}}</text>
+        </view>
+    </view>
+</view>

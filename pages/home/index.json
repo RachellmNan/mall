@@ -1,6 +1,8 @@
 {
   "usingComponents": {
-    "m-grid": "/components/grid/grid",
-    "m-weekly": "/components/weekly/index"
+    "m-grid": "/components/grid/index",
+    "m-weekly": "/components/weekly/index",
+    "m-picture-grid": "/components/picture-grid/index",
+    "m-water-flow": "/components/water-flow/index"
   }
 }
