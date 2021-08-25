@@ -5,8 +5,10 @@
             <view class="list" wx:for="{{list}}" wx:key="item">
                 <image src="{{item.img}}" />
                 <text class="title">{{item.title}}</text>
-                <text class="price">{{item.price}}</text>
+                <text class="price">{{util.handlePrice(item.price, item.discount_price)}}</text>
             </view>
         </view>
     </scroll-view>
 </view>
+
+<wxs src="../../wxs/index.wxs" module="util" />

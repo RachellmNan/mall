@@ -24,6 +24,11 @@
   line-height: 38rpx;
 }
 
+.container .content .tabs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .container .content .desc {
   margin-top: 6rpx;
   color: #999;

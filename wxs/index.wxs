@@ -1,0 +1,7 @@
+function handlePrice(price, discoutPrice){
+    return discoutPrice ? discoutPrice : price
+}
+
+module.exports = {
+    handlePrice: handlePrice
+}

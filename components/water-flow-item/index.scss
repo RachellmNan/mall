@@ -16,7 +16,10 @@
             font-size: 32rpx;
             color: #157658;
             line-height: 38rpx;
-            
+        }
+        .tabs{
+            display: flex;
+            flex-wrap: wrap;
         }
         .desc{
             margin-top: 6rpx;
