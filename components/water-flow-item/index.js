@@ -4,19 +4,19 @@ Component({
         price: String,
         title: String,
         desc: String,
-        tags: String
+        tags: String,
+        spu_id: Number
     },
-    observers:{
-        'tags':function(tags){
-            console.log('list length: ', this.data.list.length)
-            console.log('tags: ',tags)
-            this.setData({
-                list: tags.split('$')
+
+    data: {
+
+    },
+    methods: {
+        onJump(e){
+            const id =  e.currentTarget.dataset.id
+            wx.navigateTo({
+                url:`/pages/detail/index?id=${id}`
             })
         }
-    },
-    data: {
-        list:[]
-    },
-    methods: {}
+    }
 })

@@ -11,4 +11,4 @@
     </scroll-view>
 </view>
 
-<wxs src="../../wxs/index.wxs" module="util" />
+<wxs src="/wxs/index.wxs" module="util" />

@@ -1,11 +1,11 @@
-<view class="container">
+<view class="container" data-id="{{spu_id}}" bind:tap="onJump">
     <image src="{{img}}" mode="widthFix" />
     <view class="content">
         <view class="title">
             <text >{{title}}</text>
         </view>
         <view class="tabs" wx:if="{{tags}}" >
-            <m-tag title="{{item}}" wx:for="{{list}}" wx:if="{{list.length > 0}}"  wx:key="index" />
+            <m-tag title="{{item}}" wx:for="{{util.handleTag(tags)}}"  wx:key="index" />
         </view>
         <text class="price">¥ {{price}}</text>
         <view class="desc">
@@ -13,3 +13,4 @@
         </view>
     </view>
 </view>
+<wxs src="../../wxs/index.wxs" module="util"></wxs>

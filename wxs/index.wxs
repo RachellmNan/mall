@@ -2,6 +2,11 @@ function handlePrice(price, discoutPrice){
     return discoutPrice ? discoutPrice : price
 }
 
+function handleTag(tags){
+    return tags.split('$')
+}
+
 module.exports = {
-    handlePrice: handlePrice
+    handlePrice: handlePrice,
+    handleTag: handleTag
 }

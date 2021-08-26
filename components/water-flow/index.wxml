@@ -6,6 +6,7 @@
             title="{{item.title}}"
             desc="{{item.subtitle}}"
             tags="{{item.tags}}"
+            spu_id="{{item.id}}"
             wx:if="{{index % 2 == 0}}" wx:key="index" />
     </view>
     <view class="left flex-box">
@@ -15,6 +16,7 @@
             title="{{item.title}}"
             desc="{{item.subtitle}}" 
             tags="{{item.tags}}"
+            spu_id="{{item.id}}"
             wx:if="{{index % 2 != 0}}" wx:key="index"/>
     </view>
 </view>
