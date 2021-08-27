@@ -1,0 +1,43 @@
+@import '../../assets/iconfont/iconfont.wxss';
+.container{
+    display: flex;
+    background-color: #fff;
+    .operator-wrapper{
+        width: 230rpx;
+        display: flex;
+        justify-content: space-around;
+        color: #999999;
+        view{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            padding: 0 15rpx;
+        }
+        .iconfont{
+            color: #333333;
+        }
+        .content{
+            font-size: 20rpx;
+        }
+    }
+    .buy-wrapper{
+        flex: 1;
+        display: flex;
+        height: 100rpx;
+        font-size: 32rpx;
+        color: #FFFFFF;
+        .add{
+            flex: 1;
+            line-height: 100rpx;
+            text-align: center;
+            background-color: #333333;
+        }
+        .buy{
+            flex: 1;
+            line-height: 100rpx;
+            text-align: center;
+            background-color: #157658;
+        }
+    }
+}

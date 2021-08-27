@@ -1,3 +1,4 @@
+const { FenceGroup } = require("../../components/models/fence-group")
 const { explain } = require("../../models/Explain")
 const { Spu } = require("../../models/Spu")
 const { getHeight } = require("../../utils/util")
@@ -20,13 +21,14 @@ Page({
         const Spus = await Spu.getDetail(id)
         const explainList = await explain.getExplain()
         console.log('Spus: ',Spus)
-        console.log('Explain: ',explainList)
-        const height =  await getHeight()
-        console.log('height: ',height)
+        const ScrollHeight =  await getHeight(100)
+        const fenceGroup = new FenceGroup(Spus)
+        fenceGroup.initFences()
         this.setData({
             Spus,
             SwiperImgList: Spus.spu_img_list,
-            explainList
+            explainList,
+            ScrollHeight
         })
     },
 

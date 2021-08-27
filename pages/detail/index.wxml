@@ -1,51 +1,55 @@
 <view class="container">
-    <view class="img-wrapper">
-        <swiper autoplay circular indicator-dots  indicator-color="rgb(193,193,193)" indicator-active-color="#157658">
-            <swiper-item wx:for="{{SwiperImgList}}" wx:key="index">
-                <image mode="widthFix" src="{{item.img}}" />
-            </swiper-item>
-        </swiper>
-    </view>
-    <view class="synopsis-wrapper">
-        <view class="info-wrapper">
-            <text class="title">{{Spus.title}}</text>
-            <text class="subtitle">{{Spus.subtitle}}</text>
-            <view class="price-wrapper">
-                <text class="discount">{{ '¥ ' + util.handlePrice(Spus.price,Spus.discount_price)}}</text>
-                <text class="price" wx:if="{{Spus.discount_price}}">{{'¥'+Spus.price}}</text>
+    <scroll-view scroll-y >
+        <view class="wrapper" style="height: {{ScrollHeight}}rpx">
+            <view class="img-wrapper">
+                <swiper autoplay circular indicator-dots  indicator-color="rgb(193,193,193)" indicator-active-color="#157658">
+                    <swiper-item wx:for="{{SwiperImgList}}" wx:key="index">
+                        <image mode="widthFix" src="{{item.img}}" />
+                    </swiper-item>
+                </swiper>
             </view>
-            
-        </view>
-        <view class="operator-wrapper">
-            <view class="share">
-                <button >
-                    <text class="iconfont icon-share"></text>
-                    <text >分</text>
-                    <text >享</text>
-                </button>
+            <view class="synopsis-wrapper">
+                <view class="info-wrapper">
+                    <text class="title">{{Spus.title}}</text>
+                    <text class="subtitle">{{Spus.subtitle}}</text>
+                    <view class="price-wrapper">
+                        <text class="discount">{{ '¥ ' + util.handlePrice(Spus.price,Spus.discount_price)}}</text>
+                        <text class="price" wx:if="{{Spus.discount_price}}">{{'¥'+Spus.price}}</text>
+                    </view>
+                    
+                </view>
+                <view class="operator-wrapper">
+                    <view class="share">
+                        <button >
+                            <text class="iconfont icon-share"></text>
+                            <text >分</text>
+                            <text >享</text>
+                        </button>
+                    </view>
+                </view>
+            </view>
+            <view class="coupon-wrapper">
+                <view class="coupon-list">
+                    <view class="item">满999减100元券</view>
+                    <view class="item">满1699减200元券</view>
+                </view>
+                <view class="more">
+                    <text >立即领取</text>
+                    <text class="iconfont icon-arrow-right"></text>
+                </view>
+            </view>
+            <view class="explain-wrapper">
+                <view class="explain-list">
+                    <view class="explain-item" wx:for="{{explainList}}" wx:key="item">
+                        <text>{{item.text}}</text>
+                    </view>
+                </view>
+            </view>
+            <view class="spu-operator">
             </view>
         </view>
-    </view>
-    <view class="coupon-wrapper">
-        <view class="coupon-list">
-            <view class="item">满999减100元券</view>
-            <view class="item">满1699减200元券</view>
-        </view>
-        <view class="more">
-            <text >立即领取</text>
-            <text class="iconfont icon-arrow-right"></text>
-        </view>
-    </view>
-    <view class="explain-wrapper">
-        <view class="explain-list">
-            <view class="explain-item" wx:for="{{explainList}}" wx:key="item">
-                <text>{{item.text}}</text>
-            </view>
-        </view>
-    </view>
-    <view class="spu-operator">
-        <m-tab></m-tab>
-    </view>
+    </scroll-view>
+    <m-tab></m-tab>
 </view>
 
 <wxs module="util" src="../../wxs/index.wxs"></wxs>

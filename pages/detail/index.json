@@ -1,5 +1,6 @@
 {
     "usingComponents": {
-        "m-tab": "/components/tab/index"
+        "m-tab": "/components/tab/index",
+        "m-realm": "/components/realm/index"
     }
 }

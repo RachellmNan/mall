@@ -215,7 +215,7 @@ page {
 
 .container .explain-wrapper .explain-list {
   border: 2rpx dotted #DCEBE6;
-  margin-bottom: 18rpx;
+  margin-bottom: 10rpx;
 }
 
 .container .explain-wrapper .explain-list .explain-item {
