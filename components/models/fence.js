@@ -18,7 +18,7 @@ class Fence{
 
     _deduct(cells, arg){
         return cells.find(item=> item.title == arg)
-    }
+    } 
 }
 
 module.exports = {
