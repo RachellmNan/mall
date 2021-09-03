@@ -1,23 +1,29 @@
+const { FenceGroup } = require("../models/fence-group")
+
 // components/realm/index.js
 Component({
-    /**
-     * 组件的属性列表
-     */
-    properties: {
 
+    properties: {
+        Spus:Object
     },
 
-    /**
-     * 组件的初始数据
-     */
+    observers:{
+        'Spus': function(Spus){
+            const fenceGroup = new FenceGroup(Spus)
+            fenceGroup.initFences()
+            
+        }
+    },
+
     data: {
 
     },
 
-    /**
-     * 组件的方法列表
-     */
     methods: {
+
+    },
+
+    lifetimes:{
 
     }
 })

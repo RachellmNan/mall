@@ -49,7 +49,8 @@
             </view>
         </view>
     </scroll-view>
-    <m-tab></m-tab>
+    <m-tab bind:showRealm="onRealm"></m-tab>
+    <m-realm wx:if="{{showRealm}}" Spus="{{Spus}}"></m-realm>
 </view>
 
 <wxs module="util" src="../../wxs/index.wxs"></wxs>

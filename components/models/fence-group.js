@@ -23,7 +23,7 @@ class FenceGroup{
 
     _createMatrix(skuList){
         let m = []
-        this.skuList.forEach(item => {
+        skuList.forEach(item => {
             m.push(item.specs)
         });
         return new Matrix(m)

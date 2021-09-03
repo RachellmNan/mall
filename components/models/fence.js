@@ -2,6 +2,9 @@ const { Cell } = require("./cell");
 
 class Fence{
     cells=[]
+    specs
+    title
+    id
     constructor(specs){
         this.specs = specs
         this.title = specs[0].key
