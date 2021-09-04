@@ -32,5 +32,10 @@ Page({
         this.setData({
             showRealm: event.detail.showRealm
         })
+    },
+    cancelRealm(){
+        this.setData({
+            showRealm: false
+        })
     }
 })

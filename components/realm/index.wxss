@@ -1,1 +1,40 @@
-/* components/realm/index.wxss */
+.container {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  color: red;
+  background-color: #fff;
+  width: 100%;
+  z-index: 10;
+}
+
+.container .top {
+  padding: 30rpx 30rpx 0 30rpx;
+}
+
+.container .spu-info {
+  display: flex;
+  margin-bottom: 46rpx;
+}
+
+.container .spu-info image {
+  width: 160rpx;
+  margin-right: 40rpx;
+}
+
+.container .spu-info .detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.container .spu-info .detail .price {
+  margin-bottom: 14rpx;
+  font-size: 28rpx;
+  color: #157658;
+}
+
+.container .spu-info .detail .count {
+  color: #999999;
+  font-size: 20rpx;
+}

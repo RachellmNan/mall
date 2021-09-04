@@ -1,0 +1,11 @@
+.container {
+  border-bottom: 2rpx solid #E9E9E9;
+}
+
+.container .title {
+  color: #555555;
+  font-size: 24rpx;
+  margin-top: 34rpx;
+  margin-bottom: 26rpx;
+  display: block;
+}

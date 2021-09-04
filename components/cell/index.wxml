@@ -1,0 +1,5 @@
+<view class="container">
+    <view class="content-wrapper">
+        {{title}}
+    </view>
+</view>

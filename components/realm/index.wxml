@@ -1,2 +1,18 @@
-<!--components/realm/index.wxml-->
-<text>components/realm/index.wxml</text>
+<view class="container">
+    <view class="top">
+        <view class="spu-info">
+            <image mode="widthFix" src="{{Spus.img}}" />
+            <view class="detail">
+                <text class="price">¥ 33</text>
+                <text class="count">库存： 33件</text>
+            </view>
+        </view>
+        <view class="fence-wrapper" wx:for="{{fenceGroup.fences}}" wx:key="index">
+            <m-fence  fence="{{item}}"></m-fence>
+        </view>
+        <view class="count-wrapper">
+            <text >购买数量</text>
+        </view>
+    </view>
+    <view class="operator"></view>
+</view>

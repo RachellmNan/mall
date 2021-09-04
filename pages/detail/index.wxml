@@ -51,6 +51,7 @@
     </scroll-view>
     <m-tab bind:showRealm="onRealm"></m-tab>
     <m-realm wx:if="{{showRealm}}" Spus="{{Spus}}"></m-realm>
+    <m-mask wx:if="{{showRealm}}" bind:tap="cancelRealm"/>
 </view>
 
 <wxs module="util" src="../../wxs/index.wxs"></wxs>

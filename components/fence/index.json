@@ -1,6 +1,6 @@
 {
     "component": true,
     "usingComponents": {
-        "m-fence": "/components/fence/index"
+        "m-cell": "/components/cell/index"
     }
 }

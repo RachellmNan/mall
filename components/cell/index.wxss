@@ -1,0 +1,13 @@
+.container {
+  border: 2rpx solid #333333;
+  text-align: center;
+  display: inline-block;
+  margin-right: 20rpx;
+  margin-bottom: 30rpx;
+}
+
+.container .content-wrapper {
+  padding: 12rpx 22rpx;
+  color: #333333;
+  font-size: 24rpx;
+}

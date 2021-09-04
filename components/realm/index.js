@@ -11,12 +11,15 @@ Component({
         'Spus': function(Spus){
             const fenceGroup = new FenceGroup(Spus)
             fenceGroup.initFences()
-            
+            console.log('fenceGroup: ', fenceGroup)
+            this.setData({
+                fenceGroup
+            })
         }
     },
 
     data: {
-
+        fenceGroup: null
     },
 
     methods: {
