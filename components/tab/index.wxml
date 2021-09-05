@@ -10,10 +10,10 @@
         </view>
     </view>
     <view class="buy-wrapper">
-        <view class="add" bind:tap="onShowRealm">
+        <view class="add" bind:tap="onShowRealm" data-title="add">
             <text >加入购物车</text>
         </view>
-        <view class="buy" bind:tap="onShowRealm">
+        <view class="buy" bind:tap="onShowRealm" data-title="buy">
             <text >立即购买</text>
         </view>
     </view>

@@ -10,7 +10,8 @@ Page({
      * 页面的初始数据
      */
     data: {
-        showRealm: false
+        showRealm: false,
+        title:''
     },
 
     /**
@@ -30,7 +31,8 @@ Page({
     },
     onRealm(event){
         this.setData({
-            showRealm: event.detail.showRealm
+            showRealm: event.detail.showRealm,
+            title: event.detail.title
         })
     },
     cancelRealm(){

@@ -38,3 +38,21 @@
   color: #999999;
   font-size: 20rpx;
 }
+
+.container .count-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #555555;
+}
+
+.container .count-wrapper .title {
+  font-size: 24rpx;
+}
+
+.container .operator {
+  line-height: 100rpx;
+  text-align: center;
+  background-color: #157658;
+  color: #FFFFFF;
+}

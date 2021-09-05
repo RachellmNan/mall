@@ -11,8 +11,11 @@
             <m-fence  fence="{{item}}"></m-fence>
         </view>
         <view class="count-wrapper">
-            <text >购买数量</text>
+            <text class="title">购买数量</text>
+            <m-count />
         </view>
     </view>
-    <view class="operator"></view>
+    <view class="operator">
+        <text >{{title == 'add' ? '加入购物车' : '立即购买'}}</text>
+    </view>
 </view>

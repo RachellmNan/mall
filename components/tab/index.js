@@ -18,9 +18,10 @@ Component({
      * 组件的方法列表
      */
     methods: {
-        onShowRealm(){
+        onShowRealm(event){
             this.triggerEvent('showRealm',{
-                showRealm: true
+                showRealm: true,
+                title: event.currentTarget.dataset.title
             })
         }
     }

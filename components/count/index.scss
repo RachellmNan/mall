@@ -1,0 +1,20 @@
+@import '../../assets/iconfont/iconfont.wxss';
+.container{
+    margin: 30rpx 0;
+    .count{
+        display: inline-block;
+        text-align: center;
+        background-color: #DCEBE6;
+        line-height: 48rpx;
+        font-size: 24rpx;
+        color: #333333;
+        padding: 0 24rpx;
+        margin: 0 4rpx;
+    }
+    .iconfont{
+        padding: 10rpx;
+    }
+    .cannotBuy{
+        color: #BBBBBB;
+    }
+}

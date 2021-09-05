@@ -4,7 +4,8 @@ const { FenceGroup } = require("../models/fence-group")
 Component({
 
     properties: {
-        Spus:Object
+        Spus:Object,
+        title: String
     },
 
     observers:{
