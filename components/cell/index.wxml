@@ -1,5 +1,25 @@
-<view class="container">
-    <view class="content-wrapper">
-        {{title}}
+<view class="container {{c.statusStyle(cell.status).outer}}" bind:tap="onCell">
+    <view class="content-wrapper {{c.statusStyle(cell.status).inner}}">
+        {{cell.title}}
     </view>
 </view>
+
+<wxs module="c">
+    function statusStyle(status){
+        if(status == 'forbidden'){
+            return {
+                outer: 'forbidden',
+                inner: ''
+            }
+        }else if(status == 'selected'){
+            return {
+                outer: 'outer',
+                inner: 'inner'
+            }
+        }
+    }
+
+    module.exports = {
+        statusStyle: statusStyle
+    }
+</wxs>

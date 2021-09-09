@@ -4,7 +4,9 @@ Component({
      * 组件的属性列表
      */
     properties: {
-        title: String
+        cell: Object,
+        x:Number,
+        y:Number
     },
 
     /**
@@ -18,6 +20,15 @@ Component({
      * 组件的方法列表
      */
     methods: {
-
+        onCell(){
+            this.triggerEvent('cell',{
+                cell: this.properties.cell,
+                x: this.properties.x,
+                y: this.properties.y
+            },{
+                bubbles: true,
+                composed: true
+            })      
+        }
     }
 })

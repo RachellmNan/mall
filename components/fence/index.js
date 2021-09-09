@@ -5,7 +5,8 @@ Component({
      */
     properties: {
         fence: Object,
-        title: String
+        title: String,
+        x:Number
     },
     /**
      * 组件的初始数据

@@ -1,3 +1,4 @@
+const { CellStatus } = require("../../core/enum");
 const { SkuCode } = require("./sku-code");
 
 class Judger{
@@ -13,6 +14,13 @@ class Judger{
             const skuCode = new SkuCode(spec.code)
             this.pathdict = this.pathdict.concat(skuCode.totalSegements)
         });
+    }
+    judge(cell, x , y){
+        if(cell.status == CellStatus.SELECTED){
+            this.fenceGroup.fences[x].cells[y].status = CellStatus.WAITING
+        }else if(cell.status == CellStatus.WAITING){
+            this.fenceGroup.fences[x].cells[y].status = CellStatus.SELECTED
+        }
     }
 }
 

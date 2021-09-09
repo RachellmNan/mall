@@ -15,6 +15,7 @@ Component({
             fenceGroup.initFences()
             console.log('fenceGroup: ', fenceGroup)
             const judger = new Judger(fenceGroup)
+            this.data.judger = judger
             this.setData({
                 fenceGroup
             })
@@ -22,11 +23,20 @@ Component({
     },
 
     data: {
-        fenceGroup: null
+        fenceGroup: null,
+        judger: null
     },
 
     methods: {
-
+        onCell(event){
+            const cell = event.detail.cell
+            const x = event.detail.x
+            const y = event.detail.y
+            this.data.judger.judge(cell,x,y)
+            this.setData({
+                fenceGroup: this.data.judger.fenceGroup
+            })
+        }
     },
 
     lifetimes:{
