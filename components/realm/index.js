@@ -1,3 +1,4 @@
+const { Cell } = require("../models/cell")
 const { FenceGroup } = require("../models/fence-group")
 const { Judger } = require("../models/judger")
 
@@ -29,7 +30,8 @@ Component({
 
     methods: {
         onCell(event){
-            const cell = event.detail.cell
+            const cell = new Cell(event.detail.cell.spec)
+            cell.status = event.detail.cell.status
             const x = event.detail.x
             const y = event.detail.y
             this.data.judger.judge(cell,x,y)
