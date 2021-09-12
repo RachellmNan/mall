@@ -19,15 +19,36 @@
         .detail{
             display: flex;
             flex-direction: column;
-            justify-content: flex-end;
-            .price{
-                margin-bottom: 14rpx;
-                font-size: 28rpx;
-                color: #157658;
+            justify-content: space-between;
+            .title{
+
             }
-            .count{
-                color: #999999;
-                font-size: 20rpx;
+            .bottom{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .detail-info{
+                    .price{
+                        margin-bottom: 14rpx;
+                        font-size: 28rpx;
+                        color: #157658;
+                    }
+                    .disprice{
+                        font-size: 20rpx;
+                        color: #999;
+                        margin-left: 20rpx;
+                        margin-right: 20rpx;
+                        text-decoration: line-through;
+                    }
+                    .count{
+                        color: #999999;
+                        font-size: 20rpx;
+                    }
+                }
+                .tip{
+                    font-size: 24rpx;
+                    color: #999;
+                }
             }
         }
     }

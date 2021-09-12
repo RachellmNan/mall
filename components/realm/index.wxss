@@ -25,18 +25,37 @@
 .container .spu-info .detail {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 
-.container .spu-info .detail .price {
+.container .spu-info .detail .bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container .spu-info .detail .bottom .detail-info .price {
   margin-bottom: 14rpx;
   font-size: 28rpx;
   color: #157658;
 }
 
-.container .spu-info .detail .count {
+.container .spu-info .detail .bottom .detail-info .disprice {
+  font-size: 20rpx;
+  color: #999;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  text-decoration: line-through;
+}
+
+.container .spu-info .detail .bottom .detail-info .count {
   color: #999999;
   font-size: 20rpx;
+}
+
+.container .spu-info .detail .bottom .tip {
+  font-size: 24rpx;
+  color: #999;
 }
 
 .container .count-wrapper {

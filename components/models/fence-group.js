@@ -20,6 +20,14 @@ class FenceGroup{
         this.fences = fences
     }
 
+    getDefaultSku(){
+        const defaultSkuId = this.spu.default_sku_id
+        if(!defaultSkuId){
+            return false
+        }
+        return this.skuList.find(s=> s.id == defaultSkuId)
+    }
+
     _createMatrix(skuList){
         let m = []
         skuList.forEach(item => {

@@ -11,7 +11,8 @@ Page({
      */
     data: {
         showRealm: false,
-        title:''
+        title:'',
+        tt: String
     },
 
     /**

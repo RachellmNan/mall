@@ -1,7 +1,14 @@
+const { Cell } = require("./cell");
+
 class SkuPending{
     pending = []
     constructor(){
 
+    }
+    init(sku){
+        sku.specs.forEach((s, index) => {
+            this.insertCell(new Cell(s), index)
+        });
     }
     insertCell(cell, x){
         this.pending[x] = cell

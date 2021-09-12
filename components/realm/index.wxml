@@ -3,8 +3,19 @@
         <view class="spu-info">
             <image mode="widthFix" src="{{Spus.img}}" />
             <view class="detail">
-                <text class="price">¥ 33</text>
-                <text class="count">库存： 33件</text>
+                <view class="title">
+                    青芒色·灌篮高手
+                </view>
+                <view class="bottom">
+                    <view class="detail-info">
+                        <text class="price">¥ 33</text>
+                        <text class="disprice">¥ 22</text>
+                        <text class="count">库存： 33件</text>
+                    </view>
+                    <view class="tip">
+                        请选择： 尺码 颜色 图案
+                    </view>
+                </view>
             </view>
         </view>
         <view class="fence-wrapper" wx:for="{{fenceGroup.fences}}" wx:key="index">

@@ -42,6 +42,8 @@ Component({
     },
 
     lifetimes:{
-
+        attached(){
+            console.log(this.data.tt,this.data.gg)
+        }
     }
 })

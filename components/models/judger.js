@@ -20,9 +20,30 @@ class Judger{
     }
     _initSkuPending(){
         this.skuPending = new SkuPending()
+        const defaultSku =  this.fenceGroup.getDefaultSku()
+        console.log('defaultSku: ',defaultSku)
+        if(!defaultSku){
+            return 
+        }
+        this.skuPending.init(defaultSku)
+        this._initChangeDefaultSkuStatus()
+        this.judge(null,null,null,true)
     }
-    judge(cell, x , y){
-        this._changeCurrentCellStatus(cell, x, y)
+    _initChangeDefaultSkuStatus(){
+        for(let i = 0 ; i < this.skuPending.pending.length; i++){
+            const cell = this.skuPending.pending[i]
+            this.fenceGroup.fences[i].cells.forEach((c, index)=>{
+                if(c.id == cell.id){
+                    this.fenceGroup.fences[i].cells[index].status = CellStatus.SELECTED
+                }
+            })
+        }
+    }
+
+    judge(cell, x , y, isInit = false){
+        if(!isInit){
+            this._changeCurrentCellStatus(cell, x, y)
+        }
         this._changeOtherCellStatus()
     }
     _changeCurrentCellStatus(cell, x, y){

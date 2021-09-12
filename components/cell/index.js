@@ -1,3 +1,5 @@
+const { CellStatus } = require("../../core/enum")
+
 // components/cell/index.js
 Component({
     /**
@@ -21,6 +23,9 @@ Component({
      */
     methods: {
         onCell(){
+            if(this.properties.cell.status == CellStatus.FORBIDDEN){
+                return 
+            }
             this.triggerEvent('cell',{
                 cell: this.properties.cell,
                 x: this.properties.x,
