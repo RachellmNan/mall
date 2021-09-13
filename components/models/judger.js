@@ -18,10 +18,14 @@ class Judger{
             this.pathdict = this.pathdict.concat(skuCode.totalSegements)
         });
     }
+
+    isIntact(){
+        return this.skuPending.isIntact()
+    }
+
     _initSkuPending(){
-        this.skuPending = new SkuPending()
+        this.skuPending = new SkuPending(this.fenceGroup.fences.length)
         const defaultSku =  this.fenceGroup.getDefaultSku()
-        console.log('defaultSku: ',defaultSku)
         if(!defaultSku){
             return 
         }
@@ -56,8 +60,6 @@ class Judger{
             cell.status = CellStatus.SELECTED
             this.skuPending.insertCell(cell, x)
         }
-        console.log('skuPending: ',this.skuPending)
-        console.log('fenceGroup: ', this.fenceGroup)
     }
     _changeOtherCellStatus(){
         for(let x = 0; x < this.fenceGroup.fences.length; x++){
@@ -95,6 +97,12 @@ class Judger{
             }
         }
         return joiner.getStr()
+    }
+    getCurrentValue(){
+       return this.skuPending.getCurrentValue()
+    }
+    getMissingKeys(){
+        return this.skuPending.getMissingKeys()
     }
 }
 

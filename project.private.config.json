@@ -1,24 +1,30 @@
 {
-  "setting": {},
-  "condition": {
-    "plugin": {
-      "list": []
-    },
-    "game": {
-      "list": []
-    },
-    "gamePlugin": {
-      "list": []
-    },
-    "miniprogram": {
-      "list": [
-        {
-          "name": "detail",
-          "pathName": "pages/detail/index",
-          "query": "id=2",
-          "scene": null
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "有规格",
+                    "pathName": "pages/detail/index",
+                    "query": "id=2",
+                    "scene": null
+                },
+                {
+                    "name": "无规格",
+                    "pathName": "pages/detail/index",
+                    "query": "id=11",
+                    "scene": null
+                }
+            ]
         }
-      ]
     }
-  }
 }

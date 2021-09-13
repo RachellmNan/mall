@@ -2,7 +2,7 @@
   position: fixed;
   left: 0;
   bottom: 0;
-  color: red;
+  color: #000;
   background-color: #fff;
   width: 100%;
   z-index: 10;
@@ -36,6 +36,7 @@
 
 .container .spu-info .detail .bottom .detail-info .price {
   margin-bottom: 14rpx;
+  margin-right: 20rpx;
   font-size: 28rpx;
   color: #157658;
 }
@@ -43,7 +44,6 @@
 .container .spu-info .detail .bottom .detail-info .disprice {
   font-size: 20rpx;
   color: #999;
-  margin-left: 20rpx;
   margin-right: 20rpx;
   text-decoration: line-through;
 }

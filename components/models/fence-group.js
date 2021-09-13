@@ -20,6 +20,10 @@ class FenceGroup{
         this.fences = fences
     }
 
+    getSku(skuCode){
+        return  this.spu.sku_list.find(sku=> sku.code == skuCode)
+    }
+
     getDefaultSku(){
         const defaultSkuId = this.spu.default_sku_id
         if(!defaultSkuId){

@@ -1,19 +1,20 @@
 <view class="container">
     <view class="top">
         <view class="spu-info">
-            <image mode="widthFix" src="{{Spus.img}}" />
+            <image mode="widthFix" src="{{previewImg}}" />
             <view class="detail">
                 <view class="title">
-                    青芒色·灌篮高手
+                    {{title}}
                 </view>
                 <view class="bottom">
                     <view class="detail-info">
-                        <text class="price">¥ 33</text>
-                        <text class="disprice">¥ 22</text>
-                        <text class="count">库存： 33件</text>
+                        <text class="price">¥ {{price}}</text>
+                        <text class="disprice" wx:if="{{discount_price}}">¥ {{discount_price}}</text>
+                        <text class="count">库存： {{stock}}件</text>
                     </view>
-                    <view class="tip">
-                        请选择： 尺码 颜色 图案
+                    <view wx:if="{{!noSpec}}" class="tip"> 
+                        <view wx:if="{{!skuIntact}}">请选择：{{missingKeys}}</view>
+                        <view wx:else>已选择： {{selectedValue}}</view>
                     </view>
                 </view>
             </view>

@@ -50,7 +50,7 @@
         </view>
     </scroll-view>
     <m-tab bind:showRealm="onRealm"></m-tab>
-    <m-realm wx:if="{{showRealm}}" Spus="{{Spus}}" title="{{title}}"></m-realm>
+    <m-realm wx:if="{{showRealm}}" spu="{{Spus}}" title="{{title}}"></m-realm>
     <m-mask wx:if="{{showRealm}}" bind:tap="cancelRealm"/>
 </view>
 
