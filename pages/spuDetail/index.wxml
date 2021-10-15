@@ -1,0 +1,65 @@
+<view class="container">
+    <scroll-view scroll-y style="height:{{scrollHeight}}rpx">
+        <swiper class="swiper" indicator-dots  indicator-color="rgb(193,193,193)" indicator-active-color="#157658" autoplay circular>
+            <swiper-item wx:for="{{spu.spu_img_list}}" wx:key="index">
+                <image  src="{{item.img}}"/>
+            </swiper-item>
+        </swiper>
+        <view class="goods-info">
+            <view class="goodsInfo-wrapper">
+                <text class="title">{{spu.title}}</text>
+                <text class="subtitle">{{spu.subtitle}}</text>
+                <view class="price-wrapper">
+                    <text class="disprice" >¥ {{spu.discount_price ? spu.discount_price : spu.price}}</text>
+                    <text class="price" wx:if="{{spu.discount_price}}">¥ {{spu.price}}</text>
+                </view>
+                
+            </view>
+            <view class="share-box">
+                <button >
+                    <m-icon name="share" size="mini" fontsize="24" color="#157658"></m-icon>
+                    <text >分</text>
+                    <text >享</text>
+                </button>
+            </view>
+        </view>
+        <view class="coupon-wrapper">
+            <view class="coupon">
+                <text >满99减100元券</text>
+            </view>
+            <view class="coupon">
+                <text >满1699减200元券</text>
+            </view>
+            <view class="right">
+                <text >立即领取</text>
+                <m-icon name="arrow-right"></m-icon>
+            </view>
+        </view>
+        <view class="explain-wrapper">
+            <view class="explain-box">
+                <view class="explain-item" wx:for="{{explain}}" wx:key="index">{{item.text}}</view>
+            </view>
+            
+        </view>
+    </scroll-view>
+    <view class="operator-wrapper">
+        <view class="icon-wrapper">
+            <view class="home">
+                <m-icon name="shouye"></m-icon>
+                <text>首页</text>
+            </view>
+            <view class="cart">
+                <m-icon name="gouwuche"></m-icon>
+                <text>购物车</text>
+            </view>
+        </view>
+        <view class="text-wrapper">
+            <view class="home-operator">
+                <text >加入购物车</text>
+            </view>
+            <view class="buy-operator">
+                <text >立即购物车</text>
+            </view>
+        </view>
+    </view>
+</view>

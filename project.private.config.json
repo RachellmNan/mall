@@ -13,15 +13,15 @@
         "miniprogram": {
             "list": [
                 {
-                    "name": "有规格",
-                    "pathName": "pages/detail/index",
-                    "query": "id=2",
+                    "name": "home",
+                    "pathName": "pages/home/index",
+                    "query": "",
                     "scene": null
                 },
                 {
-                    "name": "无规格",
-                    "pathName": "pages/detail/index",
-                    "query": "id=11",
+                    "name": "spu-detail",
+                    "pathName": "pages/spuDetail/index",
+                    "query": "id=2",
                     "scene": null
                 }
             ]

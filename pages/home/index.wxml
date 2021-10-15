@@ -1,41 +1,58 @@
 <view class="container">
     <view class="themeA">
-        <image src="{{themeA.entrance_img}}" mode="widthFix"/>
+        <image src="{{ThemeA.entrance_img}}" />
     </view>
     <view class="bannerB">
-        <swiper class="swiper" indicator-dots  indicator-color="rgb(193,193,193)" indicator-active-color="#157658" autoplay circular>
-            <swiper-item wx:for="{{bannerB}}" wx:key="item" >
+        <swiper class="swiper" indicator-dots  indicator-color="rgb(193,193,193)" indicator-active-color="#157658" autoplay circular >
+            <swiper-item wx:for="{{BannerB.items}}" wx:key="index">
                 <image src="{{item.img}}" />
             </swiper-item>
         </swiper>
     </view>
-    <view class="gridC">
-        <m-grid grid="{{gridC}}"></m-grid>
+    <view class="categoryC">
+        <m-grid list="{{GridC}}"></m-grid>
     </view>
     <view class="activityD">
-        <image  src="{{activityD.entrance_img}}"/>
+        <image src="{{ActivityD.entrance_img}}" />
     </view>
     <view class="themeE">
-        <m-weekly img="{{themeE.title_img}}" list="{{themeESpu}}" ></m-weekly>
+        <view class="themeEtop">
+            <image src="{{ThemeE.title_img}}" />
+        </view>
+        <scroll-view scroll-x >
+            <view class="scroll-wrapper">
+                <view class="scroll-item" wx:for="{{ThemeESpu.spu_list}}" wx:key="index">
+                    <image src="{{item.img}}" mode="heightFix" />
+                    <text class="title">{{item.title}}</text>
+                    <text class="price">¥ {{item.price}}</text>
+                </view>
+            </view>
+        </scroll-view>
     </view>
     <view class="themeF">
-        <image src="{{themeF.entrance_img}}" mode="widthFix"/>
+        <image src="{{ThemeF.entrance_img}}" />
     </view>
     <view class="bannerG">
-        <view class="top">
-            <image class="top-img"  src="{{bannerG.img}}" mode="widthFix"/>
+        <view class="bannerGtop">
+            <image src="{{BannerG.img}}" />
         </view>
-        <m-picture-grid list="{{bannerG.items}}"/>
+        <view class="banner-wrapper">
+            <view class="left" >
+                <image src="{{BannerG.items[0].img}}" />
+            </view>
+            <view class="right">
+                <image class="top" src="{{BannerG.items[1].img}}"/>
+                <image class="bottom" src="{{BannerG.items[2].img}}" />
+            </view>
+        </view>
     </view>
     <view class="themeH">
-        <image src="{{themeH.entrance_img}}" mode="widthFix" />
+        <image src="{{ThemeH.entrance_img}}" />
     </view>
-    <view class="bottomSpu">
-        <image class="re_img" src="/assets/imgs/recommend.png" mode="widthFix"/>
-        <m-water-flow list="{{waterFlow}}"/>
-        <view wx:if="{{!moreData}}" class="tip">
-            <text >~~~~没有更多数据了~~~~</text>
+    <view class="recommend-wrapper">
+        <view class="top-img">
+            <image src="/assets/imgs/recommend.png" />
         </view>
+        <m-water-flow spus="{{spus}}" bind:goDetail="goDetail"></m-water-flow>
     </view>
 </view>
-

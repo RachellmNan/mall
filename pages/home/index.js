@@ -1,78 +1,70 @@
-const { Activity } = require("../../models/Activity")
-const { Banner} = require("../../models/Banner")
-const { Category } = require("../../models/Category")
-const { SpuPaging } = require("../../models/Spu-paging")
-const { Theme } = require("../../models/Theme")
-
+const Activity = require("../../models/Activity")
+const Banner = require("../../models/Banner")
+const Category = require("../../models/Category")
+const Spu = require("../../models/Spu")
+const SpuPaging = require("../../models/SpuPaging")
+const Theme = require("../../models/Theme")
 Page({
 
-	data: {
-		themeA: null,
-        themeE: null,
-        themeESpu: null,
-        themeF: null,
-        themeH: null,
-		bannerB: null,
-		gridC:  [],
-        activityD: null,
-        bannerG: null,
-        spuPaging: null,
-        waterFlow: null,
-        moreData: true
-	},
-    
-	async onLoad(options) {
-		this.initData()
-        this.initBottomSpuList()
-	},
+    /**
+     * 页面的初始数据
+     */
+    data: {
 
-	async initData(){
-		let themes = new Theme()
-		await themes.getThemes()
-		let themeA =  themes.getHomeLocationA()
-		let bannerB = await Banner.getHomeLocationB()
-		let gridC = await Category.getCategoryC()
-		let activityD = await Activity.getHomeLocationD()
-		let themeE =  themes.getHomeLocationE()
-		let themeESpu = []
-		if(themeE.online){
-			let data = await await Theme.getHomeLocationESpu()
-			if(data){
-				themeESpu = data.spu_list.slice(0,8)
-			}
-		}
-		let themeF = themes.getHomeLocationF()
-		let bannerG = await Banner.getHomeLocationG()
-		let themeH = themes.getHomeLocationH()
-		this.setData({
-			themeA,
-			bannerB : bannerB.items,
-			gridC,
-			activityD,
-			themeE,
-			themeESpu,
-			themeF,
-			bannerG,
-			themeH
-		})
-	},
-    
-    async initBottomSpuList(){
-        this.data.spuPaging = await  SpuPaging.getLatestPaging()
-        const data = await this.data.spuPaging.getMoreData()
+    },
+
+    async onLoad(options) {
+        await this.init()
+        await this.initBottom()
+    },
+
+    async init(){
+        await Theme.getAllTheme()
+        let ThemeA = Theme.getHomeLocationA()
+        let BannerB = await Banner.getHomeLocationB()
+        let GridC = await Category.getHomeLocationC()
+        let ActivityD = await Activity.getHomeLocationD()
+        let ThemeE = Theme.getHomeLocationE()
+        let ThemeESpu = await Theme.getHomeLocationESpu()
+        let ThemeF = Theme.getHomeLocationF()
+        let BannerG = await Banner.getHomeLocationG()
+        let ThemeH = Theme.getHomeLocationH()
         this.setData({
-            waterFlow: data.items,
-            moreData: data.moreData
+            ThemeA,
+            BannerB,
+            GridC,
+            ActivityD,
+            ThemeE,
+            ThemeESpu,
+            ThemeF,
+            BannerG,
+            ThemeH,
+        })
+    },
+
+    async initBottom(){
+        let paging =  SpuPaging.getHomePaging()
+        console.log('paging: ',paging)
+        let spus = (await paging.getMoreData()).items
+        console.log('spus: ', spus)
+        this.setData({
+            paging,
+            spus
+        })
+    },
+
+    goDetail(event){
+        let id = event.detail.id
+        wx.navigateTo({
+            url:`/pages/spuDetail/index?id=${id}`
         })
     },
     async onReachBottom(){
-        let data = await this.data.spuPaging.getMoreData()
-        if(!data){
-            return 
-        }
+        let res = await this.data.paging.getMoreData()
+        console.log('res',res.accumulator)
+        
         this.setData({
-            waterFlow: data.accumulator,
-            moreData: data.moreData
+            spus: res.accumulator
         })
     }
 })
