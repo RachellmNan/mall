@@ -1,13 +1,12 @@
-import { Http } from "../utils/http"
+const Http = require("../utils/http")
 
 class Activity{
     static locationD = 'a-2'
-    static getHomeLocationD(){
-        return Http.request({
-            url:`/v1/activity/name/${this.locationD}`
+    static async getHomeLocationD(){
+        return await Http.request({
+            url: `/v1/activity/name/${this.locationD}`
         })
     }
 }
-export {
-    Activity
-}
+
+module.exports = Activity

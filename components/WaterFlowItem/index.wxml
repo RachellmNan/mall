@@ -1,0 +1,14 @@
+<view class="container" bind:tap="goDetail">
+    <image  src="{{spu.img}}"/>
+    <view class="bottom">
+        <text class="title">{{spu.title}}</text>
+        <view class="tag-wrapper" wx:if="{{spu.tags.length}}">
+            <m-tag wx:for="{{tags}}" wx:key="index" title="{{item}}"></m-tag>
+        </view>
+        <view class="price-wrapper">
+            <text class="disprice">{{spu.discount_price ? spu.discount_price : spu.price}}</text>
+            <text class="price" wx:if="{{spu.discount_price}}">¥ {{spu.price}}</text>
+        </view>
+        <text class="subtitle">{{spu.subtitle}}</text>
+    </view>
+</view>

@@ -1,0 +1,8 @@
+<view class="container">
+    <view class="flexbox">
+        <m-water-flow-item wx:for="{{spus}}"  wx:if="{{index%2 == 0}}" wx:key="index" spu="{{item}}"></m-water-flow-item>
+    </view>
+    <view class="flexbox">
+        <m-water-flow-item wx:for="{{spus}}"  wx:if="{{index%2 !== 0}}" wx:key="index" spu="{{item}}"></m-water-flow-item>
+    </view>
+</view>

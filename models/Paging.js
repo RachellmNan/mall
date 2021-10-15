@@ -1,4 +1,5 @@
-const { Http } = require("../utils/http")
+const Http = require("../utils/http")
+
 
 class Paging{
     req
@@ -35,6 +36,7 @@ class Paging{
     async _actualGetData(){
         const req = this._getCurrentReq()
         let paging = await Http.request(req)
+        console.log('paging: ',paging)
         if(!paging){
             return null
         }

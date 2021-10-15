@@ -1,19 +1,21 @@
-const { Http } = require("../utils/http")
+const Http = require("../utils/http")
 
 class Spu{
-    static isNoSpec(spu){
-        if(spu.sku_list.length == 1 && spu.sku_list[0].specs.length == 0){
-            return true
-        }
-        return false
+    static async getLatest(){
+        return await Http.request({
+            url: '/v1/spu/latest'
+        })
     }
-    static getDetail(id){
-        return Http.request({
+    static async getSpuDetail(id){
+        return await Http.request({
             url: `/v1/spu/id/${id}/detail`
+        })
+    }
+    static async getExplain(){
+        return await Http.request({
+            url: '/v1/sale_explain/fixed'
         })
     }
 }
 
-module.exports = {
-    Spu
-}
+module.exports = Spu

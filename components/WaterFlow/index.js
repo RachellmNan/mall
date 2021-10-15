@@ -1,9 +1,12 @@
-// components/grid/index.js
+// components/WaterFlow/index.js
 Component({
+    /**
+     * 组件的属性列表
+     */
     properties: {
-        list:{
-            type:Array,
-            value:[]
+        spus:{
+            type: Array,
+            value: []
         }
     },
 

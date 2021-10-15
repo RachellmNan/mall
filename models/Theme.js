@@ -1,16 +1,14 @@
-const { Http } = require("../utils/http")
-
+const Http = require('../utils/http')
 class Theme{
+    static themeList = []
     static locationA = 't-1'
     static locationE = 't-2'
     static locationF = 't-3'
     static locationH = 't-4'
 
-    themes = []
-
-    async getThemes(){
-        let names = `${Theme.locationA},${Theme.locationE},${Theme.locationF},${Theme.locationH}`
-        this.themes = await Http.request({
+    static async getAllTheme(){
+        let names = `${this.locationA},${this.locationE},${this.locationF},${this.locationH}`
+        this.themeList = await Http.request({
             url:'/v1/theme/by/names',
             data:{
                 names
@@ -18,28 +16,27 @@ class Theme{
         })
     }
 
-    getHomeLocationA(){
-        return this.themes.find(value=>value.name == Theme.locationA)  
-    } 
-    getHomeLocationE(){
-        return this.themes.find(value=>value.name == Theme.locationE)
+    static getHomeLocationA(){
+        return this.themeList.find(item => item.name == this.locationA)
     }
-    getHomeLocationF(){
-        return this.themes.find(value=>value.name == Theme.locationF)
+
+    static getHomeLocationE(){
+        return this.themeList.find(item => item.name == this.locationE)
     }
-    getHomeLocationH(){
-        return this.themes.find(value=>value.name == Theme.locationH)
+
+    static getHomeLocationF(){
+        return this.themeList.find(item => item.name == this.locationF)
     }
-    static getHomeLocationESpu(){
-        return this.getThemeSpuByNanme(this.locationE)
+
+    static getHomeLocationH(){
+        return this.themeList.find(item => item.name == this.locationH)
     }
-    static getThemeSpuByNanme(name){
-        return Http.request({
-            url:`/v1/theme/name/${name}/with_spu`
+
+    static async getHomeLocationESpu(){
+        return await Http.request({
+            url: `/v1/theme/name/${this.locationE}/with_spu`
         })
-    }    
+    }
 }
 
-module.exports = {
-    Theme
-}
+module.exports = Theme

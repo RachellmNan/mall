@@ -1,10 +1,18 @@
-// components/tag/index.js
+// components/icon/index.js
 Component({
     /**
      * 组件的属性列表
      */
     properties: {
-        title:String
+        name: String,
+        color:{
+            type:String,
+            value:'#333'
+        },
+        fontsize:{
+            type:Number,
+            value:32
+        }
     },
 
     /**

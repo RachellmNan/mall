@@ -1,5 +1,0 @@
-<view class="container">
-    <text class="iconfont icon-jian {{count <= minCount ? 'cannotBuy' : '' }}" bind:tap="minu"></text>
-    <text class="count">{{count}}</text>
-    <text class="iconfont icon-tianjia {{count >= maxCount ? 'cannotBuy' : '' }}" bind:tap="add"></text>
-</view>

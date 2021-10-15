@@ -1,6 +1,0 @@
-{
-    "component": true,
-    "usingComponents": {
-        "m-cell": "/components/cell/index"
-    }
-}

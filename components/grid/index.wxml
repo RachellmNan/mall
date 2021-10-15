@@ -1,9 +1,6 @@
-<view class="grid">
-    <view class="grid-item" wx:for="{{list}}" wx:key="item">
-        <view class="detail">
-             <image src="{{item.img}}"  mode="widthFix"/>
-            <text >{{item.title}}</text>
-        </view>
-       
+<view class="container">
+    <view class="item" wx:for="{{list}}" wx:key="index">
+        <image src="{{item.img}}" mode="widthFix"/>
+        <text >{{item.title}}</text>
     </view>
 </view>
