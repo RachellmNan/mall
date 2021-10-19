@@ -35,4 +35,9 @@
 .container .bottom .subtitle {
   color: #999;
   font-size: 24rpx;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }

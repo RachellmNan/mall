@@ -1,0 +1,3 @@
+<view class="container" style="font-size:{{fontsize}}rpx;background-color:{{backgroundColor}};color:{{color}}">
+    {{title}}
+</view>

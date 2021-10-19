@@ -1,0 +1,7 @@
+{
+    "component": true,
+    "usingComponents": {
+        "m-count": "/components/count/index",
+        "m-fence": "/components/fence/index"
+    }
+}

@@ -1,0 +1,7 @@
+<view class="container">
+    <view class="box">
+        <text class="char">-</text>
+        <text class="count">{{count}}</text>
+        <text class="char">+</text>
+    </view>
+</view>

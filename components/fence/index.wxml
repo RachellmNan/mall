@@ -1,0 +1,7 @@
+<view class="container">
+    <text class="title">{{fence.key}}</text>
+    <view class="cell-wrapper">
+        <m-cell wx:for="{{fence.cells}}" cell="{{item}}" wx:key="index"></m-cell>
+    </view>
+    
+</view>

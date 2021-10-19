@@ -1,0 +1,81 @@
+.container {
+  background-color: #fff;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+}
+
+.container .scroll-wrapper {
+  display: flex;
+  padding: 30rpx;
+  height: 100%;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+.container .scroll-wrapper .goods-detail {
+  display: flex;
+  margin-bottom: 46rpx;
+}
+
+.container .scroll-wrapper .goods-detail image {
+  width: 160rpx;
+  height: 160rpx;
+  margin-right: 40rpx;
+}
+
+.container .scroll-wrapper .goods-detail .detail-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container .scroll-wrapper .goods-detail .detail-info .title {
+  font-size: 32rpx;
+}
+
+.container .scroll-wrapper .goods-detail .detail-info .tip-wrapper {
+  color: #999;
+  font-size: 22rpx;
+}
+
+.container .scroll-wrapper .goods-detail .detail-info .tip-wrapper .tip-top {
+  margin-bottom: 6rpx;
+}
+
+.container .scroll-wrapper .goods-detail .detail-info .tip-wrapper .tip-top .disprice {
+  font-size: 30rpx;
+  color: #157658;
+  margin-right: 30rpx;
+}
+
+.container .scroll-wrapper .goods-detail .detail-info .tip-wrapper .tip-top .price {
+  margin-right: 30rpx;
+  text-decoration: line-through;
+}
+
+.container .scroll-wrapper .goods-detail .detail-info .tip-wrapper .tip {
+  font-size: 26rpx;
+}
+
+.container .scroll-wrapper .count-wrapper {
+  height: 110rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container .scroll-wrapper .count-wrapper .count-title {
+  font-size: 24rpx;
+  color: #555;
+}
+
+.container .command {
+  line-height: 100rpx;
+  background-color: #333;
+  text-align: center;
+  font-size: 32rpx;
+  color: #fff;
+}

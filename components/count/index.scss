@@ -1,0 +1,24 @@
+.container{
+    display: inline-block;
+    height: 48rpx;
+    .box{
+        display: flex;
+        border: 2rpx solid #157658;
+        align-items: center;
+        height: 100%;
+        .char{
+            box-sizing: border-box;
+            height: 100%;
+            line-height: 20rpx;
+            padding: 10rpx;
+        }
+        .count{
+            width: 64rpx;
+            line-height: 48rpx;
+            text-align: center;
+            font-size: 24rpx;
+            color: #333;
+        }
+    }
+    
+}

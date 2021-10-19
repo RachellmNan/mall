@@ -1,0 +1,31 @@
+.container{
+    display: inline-block;
+    padding: 4rpx;
+    border: 2rpx solid #333;
+    margin-right: 20rpx;
+    .box{
+        text-align: center;
+        line-height: 24rpx;
+        font-size: 24rpx;
+        display: inline-block;
+        padding: 16rpx 26rpx;
+        box-sizing: border-box;
+    }   
+}
+
+.outer{
+    border-color: #157658;
+}
+
+.inner{
+    background-color: #157658;
+    color: #fff;
+}
+
+.forbidden-outer{
+    border-color: #BBBBBB;
+    
+}
+.forbidden-inner{
+    color: #BBBBBB;
+}

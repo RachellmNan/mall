@@ -1,0 +1,5 @@
+.container {
+  display: inline-block;
+  padding: 20rpx;
+  margin-right: 20rpx;
+}

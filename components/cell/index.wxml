@@ -1,0 +1,29 @@
+<view class="container {{util.getStatus(cell.status).outer}}" bind:tap="onSelect">
+    <view class="box {{util.getStatus(cell.status).inner}}">
+        <text >{{cell.value}}</text>
+    </view>
+</view>
+
+<wxs module="util">
+    function getStatus(status){
+        if(status == 'selected'){
+            return {
+                outer:'outer',
+                inner:'inner'
+            }
+        }else if(status == 'forbidden'){
+            return {
+                outer: 'forbidden-outer',
+                inner: 'forbidden-inner'
+            }
+        }else{
+            return {
+                outer:'',
+                inner:''
+            }
+        }
+    }
+    module.exports = {
+        getStatus : getStatus
+    }
+</wxs>

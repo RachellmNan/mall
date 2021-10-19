@@ -1,0 +1,32 @@
+<view class="container">
+    <scroll-view scroll-y style="height:826rpx">
+        <view class="scroll-wrapper">
+            <view class="goods-detail">
+                <image src="{{spu.img}}" />
+                <view class="detail-info">
+                    <view class="title">橘黄色·七龙珠</view>
+                    <view class="tip-wrapper">
+                        <view class="tip-top">
+                            <text class="disprice">¥ {{spu.discount_price ? spu.discount_price : spu.price}}</text>
+                            <text class="price" wx:if="{{spu.discount_price}}">¥ {{spu.price}}</text>
+                            <text class="rest">库存: 999件</text>
+                        </view>
+                        <view class="tip-bottom">
+                            请选择：<text class="tip">颜色，图案，尺码</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="fence">
+                <m-fence wx:for="{{fenceGroup.fences}}" wx:key="index" fence="{{item}}"></m-fence>
+            </view>
+            <view class="count-wrapper">
+                <text class="count-title">购买数量</text>
+                <m-count></m-count>
+            </view>
+        </view>
+    </scroll-view>
+    <view class="command">
+        {{title}}
+    </view>
+</view>
