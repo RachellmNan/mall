@@ -1,0 +1,43 @@
+<view class="container">
+    <scroll-view scroll-y style="height:{{scrollHeight}}rpx">
+        <view class="scroll-box">
+            <view class="good-wrapper">
+                <view class="good-box">
+                    <view class="flex-left">
+                        <view class="check-box"></view>
+                        <image src="/assets/imgs/test.png" />
+                    </view>
+                    <view class="flex-right">
+                        <view class="flex-sub-top">
+                            <text class="title">青芒色·圣斗士</text>
+                            <view class="tags">青芒色；圣斗士；大号L</view>
+                        </view>
+                        <view class="flex-sub-bottom">
+                            <text class="price">¥ 88</text>
+                            <m-count></m-count>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="divider">
+                <text >热门推荐</text>
+            </view>
+            <m-water-flow spus="{{spus}}"></m-water-flow>
+        </view>
+    </scroll-view>
+    <view class="overview-wrapper">
+        <view class="flex-left">
+            <view class="flex-sub-left">
+                <view class="check-box"></view>
+                <text class="check-desc">全选</text>
+            </view>
+            <view class="flex-sub-right">
+                <text >合计</text>
+                <text class="total-price">¥ 59</text>
+            </view>
+        </view>
+        <view class="flex-right">
+            <text class="submit">结算（1）</text>
+        </view>
+    </view>
+</view>

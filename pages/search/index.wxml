@@ -1,0 +1,28 @@
+<view class="container">
+    <view class="search-wrapper">
+        <view class="search-box">
+            <m-icon name="search"></m-icon>
+            <input placeholder="搜索商品"  value="{{searchValue}}"  bindconfirm="onConfirm"/>
+            <m-icon class="delete" bind:tap="delete" name="shanchu"></m-icon>
+        </view>
+        <view class="cancel" bind:tap="cancel">取消</view>
+    </view>
+    <view class="divider"></view>
+    <view wx:if="{{!searchValue}}" class="keywords">
+        <view class="history">
+            <view class="tab">历史搜索</view>
+            <view class="tabs">
+                <m-tab title="灯" data-title="灯" bind:tap="searchFromTag"/>
+            </view>
+        </view>
+        <view class="hot">
+            <view class="tab">热门搜索</view>
+            <view class="tabs" >
+                <m-tab bind:tap="searchFromTag" data-title="{{item.title}}" wx:for="{{tags}}" wx:key="index" color="{{item.highlight == 1? '#157658' : '#666'}}" backgroundColor="{{item.highlight == 1?'#DCEBE6':'#F3F3F3'}}" title="{{item.title}}"/>
+            </view>
+        </view>
+    </view>
+    <view wx:else class="search-detail">
+        <m-water-flow spus="{{searchResult.items}}"></m-water-flow>
+    </view>
+</view>

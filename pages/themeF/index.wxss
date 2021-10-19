@@ -1,0 +1,68 @@
+.container .internal_top_img {
+  height: 440rpx;
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+
+.container .tab-wrapper .tab {
+  position: relative;
+  margin-bottom: 20rpx;
+}
+
+.container .tab-wrapper .tab image {
+  width: 100%;
+  height: 400rpx;
+}
+
+.container .tab-wrapper .tab .sub-tab {
+  width: 320rpx;
+  top: 32rpx;
+  right: 40rpx;
+  background-color: #fff;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-left: 30rpx;
+}
+
+.container .tab-wrapper .tab .sub-tab .title {
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 14rpx;
+}
+
+.container .tab-wrapper .tab .sub-tab .desc {
+  font-size: 24rpx;
+  color: #999;
+  margin-bottom: 38rpx;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.container .tab-wrapper .tab .sub-tab .price-wrapper {
+  font-size: 28rpx;
+  color: #157658;
+  margin-bottom: 14rpx;
+}
+
+.container .tab-wrapper .tab .sub-tab .price {
+  font-size: 34rpx;
+}
+
+.container .tab-wrapper .tab .sub-tab .buy {
+  padding: 18rpx 24rpx;
+  display: inline-block;
+  background-color: #333;
+  width: 176rpx;
+  color: #fff;
+  margin-bottom: 28rpx;
+}
+
+.container .tab-wrapper .tab:last-child {
+  margin-bottom: 0;
+}

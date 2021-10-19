@@ -54,12 +54,14 @@
             </view>
         </view>
         <view class="text-wrapper">
-            <view class="home-operator">
+            <view class="home-operator" bind:tap="onRealm" data-title="加入购物车">
                 <text >加入购物车</text>
             </view>
-            <view class="buy-operator">
-                <text >立即购物车</text>
+            <view class="buy-operator" bind:tap="onRealm" data-title="立即购买">
+                <text >立即购买</text>
             </view>
         </view>
     </view>
+    <view class="mask" wx:if="{{showMask}}" bind:tap="closeRealm"></view>
+    <m-realm wx:if="{{showMask}}" title="{{realmTitle}}" fenceGroup="{{fenceGroup}}" spu="{{spu}}"></m-realm>
 </view>

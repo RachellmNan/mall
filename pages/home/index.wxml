@@ -12,7 +12,7 @@
     <view class="categoryC">
         <m-grid list="{{GridC}}"></m-grid>
     </view>
-    <view class="activityD">
+    <view class="activityD" bind:tap="goCoupon">
         <image src="{{ActivityD.entrance_img}}" />
     </view>
     <view class="themeE">
@@ -29,11 +29,11 @@
             </view>
         </scroll-view>
     </view>
-    <view class="themeF">
+    <view class="themeF" bind:tap="goThemeF" data-name='t-3'>
         <image src="{{ThemeF.entrance_img}}" />
     </view>
-    <view class="bannerG">
-        <view class="bannerGtop">
+    <view class="bannerG" >
+        <view class="bannerGtop" bind:tap="geBanner">
             <image src="{{BannerG.img}}" />
         </view>
         <view class="banner-wrapper">
@@ -46,7 +46,7 @@
             </view>
         </view>
     </view>
-    <view class="themeH">
+    <view class="themeH" bind:tap="goThemeH" data-name='t-4'>
         <image src="{{ThemeH.entrance_img}}" />
     </view>
     <view class="recommend-wrapper">

@@ -1,13 +1,48 @@
 {
     "pages": [
         "pages/home/index",
-        "pages/spuDetail/index"
+        "pages/spuDetail/index",
+        "pages/coupons/index",
+        "pages/cart/index",
+        "pages/category/index",
+        "pages/my/index",
+        "pages/search/index",
+        "pages/themeF/index",
+        "pages/themeH/index"
     ],
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#fff",
         "navigationBarTitleText": "商城",
         "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/home/index",
+                "text": "首页",
+                "iconPath": "/assets/imgs/home@dis.png",
+                "selectedIconPath": "/assets/imgs/home.png"
+            },
+            {
+                "pagePath": "pages/category/index",
+                "text": "分类",
+                "iconPath": "/assets/imgs/category@dis.png",
+                "selectedIconPath": "/assets/imgs/category.png"
+            },
+            {
+                "pagePath": "pages/cart/index",
+                "text": "购物车",
+                "iconPath": "/assets/imgs/cart@dis.png",
+                "selectedIconPath": "/assets/imgs/cart.png"
+            },
+            {
+                "pagePath": "pages/my/index",
+                "text": "我的",
+                "iconPath": "/assets/imgs/user@dis.png",
+                "selectedIconPath": "/assets/imgs/user.png"
+            }
+        ]
     },
     "style": "v2",
     "sitemapLocation": "sitemap.json"

@@ -1,0 +1,73 @@
+<view class="container">
+    <view class="user-wrapper">
+        <view class="user-info">
+            <open-data type="userAvatarUrl"  />
+            <open-data type="userNickName"  />
+        </view>
+        <view class="bottom-wrapper">
+            <view class="category-list">
+                <view class="flex-box">
+                    <text class="count">3</text>
+                    <text >优惠券</text>
+                </view>
+                <view class="flex-box">
+                    <m-icon name="guanyu" color="#157658"></m-icon>
+                    <text >正在开发</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="order-wrapper">
+        <view class="order-box">
+            <view class="subtitle">
+                <text >我的订单</text>
+            </view>
+            <view class="order-bottom">
+                <view class="optional-wrapper">
+                    <m-icon name="daizhifu1" fontsize="40" color="#157658"></m-icon>
+                    <text class="optional-name">待支付</text>
+                </view>
+                <view class="optional-wrapper">
+                    <m-icon name="daifahuo" fontsize="40" color="#157658"></m-icon>
+                    <text class="optional-name">待发货</text>
+                </view>
+                <view class="optional-wrapper">
+                    <m-icon name="ziyuan" fontsize="40" color="#157658"></m-icon>
+                    <text class="optional-name">待收货</text>
+                </view>
+                <view class="optional-wrapper">
+                    <m-icon name="yiwancheng" fontsize="40" color="#157658"></m-icon>
+                    <text class="optional-name">已完成</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="additional-option-wrapper">
+        <view class="additional-option">
+            <view class="additional-left">
+                <m-icon name="dingdan"></m-icon>
+                <text >全部订单</text>
+            </view>
+            <view class="additional-right">
+                <m-icon name="arrow-right"></m-icon>
+            </view>
+        </view>
+        <view class="additional-option">
+            <view class="additional-left">
+                <m-icon name="youhuiquan"></m-icon>
+                <text >优惠券</text>
+            </view>
+            <view class="additional-right">
+                <m-icon name="arrow-right"></m-icon>
+            </view>
+        </view><view class="additional-option">
+            <view class="additional-left">
+                <m-icon name="shouhuodizhi"></m-icon>
+                <text >收获地址</text>
+            </view>
+            <view class="additional-right">
+                <m-icon name="arrow-right"></m-icon>
+            </view>
+        </view>
+    </view>
+</view>

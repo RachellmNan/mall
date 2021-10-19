@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+      "m-icon": "/components/icon/index",
+      "m-tab": "/components/tab/index",
+      "m-water-flow": "/components/WaterFlow/index"
+  }
+}

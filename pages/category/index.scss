@@ -1,0 +1,109 @@
+.container{
+    background-color: #F3F3F3;
+    .search-wrapper{
+        display: flex;
+        align-items: center;
+        height: 80rpx;
+        margin-bottom: 4rpx;
+        background-color: #fff;
+        .search-box{
+            background-color: #F1F1F1;
+            line-height: 60rpx;
+            width: 710rpx;
+            text-align: center;
+            color: #C4C9D2;
+            margin: auto;
+            m-icon{
+                margin-right: 10rpx;
+            }
+        }
+        
+    }
+    .category-wrapper{
+        display: flex;
+        .parent-wrapper{
+            background-color: #fff;
+            width: 158rpx;
+            text-align: center;
+            margin-right: 4rpx;
+            .parent-root{
+                font-size: 28rpx;
+                line-height: 88rpx;
+                position: relative;
+                
+            }
+            .isSelectd{
+                &::before{
+                    content: '';
+                    display: block;
+                    height: 40rpx;
+                    background-color: #157658;
+                    width: 8rpx;
+                    left: 0;
+                    right: 0;
+                    top: 24rpx;
+                    position: absolute;
+                }
+            }
+
+        }
+        .sub-wrapper{
+            background-color: #fff;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .banner{
+                margin-top: 16rpx;
+                width: 550rpx;
+                height: 160rpx;
+                margin-bottom: 40rpx;
+            }
+            .sub-title{
+                font-size: 24rpx;
+                position: relative;
+                margin-bottom: 32rpx;
+                &::before{
+                    content: '..........';
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    right: -100%;
+                    transform: translateY(-70%);
+                }
+                &::after{
+                    content: '..........';
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: -100%;
+                    transform: translateY(-70%);
+                }
+            }
+            .sub-box{
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                box-sizing: border-box;
+                padding: 0 34rpx;
+                .sub-item{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-bottom: 44rpx;
+                    image{
+                        width: 120rpx;
+                        height: 120rpx;
+                        margin-bottom: 12rpx;
+                        margin-right: 26rpx;
+                        margin-left: 26rpx;
+                    }
+                    text{
+                        font-size: 20rpx;
+                        color: #333;
+                    }
+                }
+            }
+        }
+    }
+}

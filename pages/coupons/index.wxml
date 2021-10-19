@@ -1,0 +1,13 @@
+<view class="container">
+    <view class="coupon" wx:for="{{coupons}}" wx:key="index">
+        <image src="/assets/imgs/coupon.png" />
+        <text class="title">{{item.title}}</text>
+        <view class="time-wrapper">
+            <text >{{util.DateTranforom(item.start_time)}}-</text>
+            <text >{{util.DateTranforom(item.end_time)}}</text>
+        </view>
+        
+    </view>
+</view>
+
+<wxs src="../../wxs/index.wxs" module="util"></wxs>

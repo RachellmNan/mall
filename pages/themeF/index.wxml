@@ -1,0 +1,15 @@
+<view class="container">
+    <image class="internal_top_img" src="{{theme.internal_top_img}}" />
+    <view class="tab-wrapper">
+        <view class="tab" wx:for="{{theme.spu_list}}" wx:key="index">
+            <image src="{{item.for_theme_img ? item.for_theme_img:item.img}}" />
+            <view class="sub-tab">
+                <text class="title">{{item.title}}</text>
+                <text class="desc">{{item.subtitle}}</text>
+                <view class="price-wrapper">
+                    ¥ <text class="price">{{item.price}}</text></view>
+                <text class="buy">立即购买</text>
+            </view>
+        </view>
+    </view>
+</view>

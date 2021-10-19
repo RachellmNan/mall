@@ -37,6 +37,12 @@ class Theme{
             url: `/v1/theme/name/${this.locationE}/with_spu`
         })
     }
+
+    static async getThemeSpu(name){
+        return await Http.request({
+            url: `/v1/theme/name/${name}/with_spu`
+        })
+    }
 }
 
 module.exports = Theme

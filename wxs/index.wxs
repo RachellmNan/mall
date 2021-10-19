@@ -1,3 +1,10 @@
-function name(params) {
-    
+function DateTranforom(num) {
+
+    if(num){
+        return getDate(num).toLocaleDateString()
+    }
+}
+
+module.exports = {
+    DateTranforom: DateTranforom
 }

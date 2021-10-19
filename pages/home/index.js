@@ -4,6 +4,7 @@ const Category = require("../../models/Category")
 const Spu = require("../../models/Spu")
 const SpuPaging = require("../../models/SpuPaging")
 const Theme = require("../../models/Theme")
+const Http = require("../../utils/http")
 Page({
 
     /**
@@ -65,6 +66,22 @@ Page({
         
         this.setData({
             spus: res.accumulator
+        })
+    },
+    goCoupon(){
+        wx.navigateTo({
+            url:'/pages/coupons/index'
+        })
+    },
+    goThemeF(event){
+        let name = event.currentTarget.dataset.name
+        wx.navigateTo({
+            url:`/pages/themeF/index?name=${name}`
+        })
+    },
+    goThemeH(event){
+        wx.navigateTo({
+            url: '/pages/themeF/index?name=t-4'
         })
     }
 })

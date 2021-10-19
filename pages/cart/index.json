@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+        "m-water-flow": "/components/WaterFlow/index",
+        "m-count": "/components/count/index"
+  }
+}

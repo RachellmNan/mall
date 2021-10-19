@@ -1,0 +1,23 @@
+<view class="container">
+    <view class="search-wrapper">
+        <view class="search-box" bind:tap="goSearch">
+            <m-icon name="search" color="#C4C9D2"></m-icon>
+            <text >搜索商品</text>
+        </view>
+    </view>
+    <view class="category-wrapper" style="height:{{categoryHight}}rpx">
+        <view class="parent-wrapper" >
+            <view  bind:tap="onRoot" data-id="{{item.id}}" class="parent-root {{item.id == selectedRootId ? 'isSelectd': ''}}" wx:for="{{roots}}" wx:key="index">{{item.name}}</view>
+        </view>
+        <view class="sub-wrapper">
+            <image class="banner" src="{{BannerImg}}"/>
+            <view class="sub-title">全部分类</view>
+            <view class="sub-box">
+                <view class="sub-item" wx:for="{{subCategory}}" wx:key="index" data-id="{{item.id}}" bind:tap="goDetail">
+                    <image src="{{item.img}}" />
+                    <text >{{item.name}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
