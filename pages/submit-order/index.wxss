@@ -1,0 +1,109 @@
+.container .address-wrapper {
+  height: 176rpx;
+  background-color: #F6FBF9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20rpx;
+}
+
+.container .address-wrapper .address-box {
+  width: 360rpx;
+  height: 90rpx;
+  border: 2rpx solid #157658;
+  line-height: 90rpx;
+  font-size: 24rpx;
+  color: #157658;
+  text-align: center;
+}
+
+.container .address-wrapper .address-box text {
+  margin-left: 12rpx;
+}
+
+.container .order-item-wrapper {
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  padding-bottom: 20rpx;
+}
+
+.container .coupon-wrapper {
+  padding: 0 30rpx;
+  display: flex;
+  line-height: 88rpx;
+  background-color: #fff;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #F5F5F5;
+}
+
+.container .coupon-wrapper .left {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.container .coupon-wrapper .right {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.container .coupon-item-wrapper {
+  padding: 30rpx;
+  background-color: #fff;
+}
+
+.container .coupon-item-wrapper .coupon-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container .coupon-item-wrapper .coupon-item .flex-left {
+  display: flex;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.container .coupon-item-wrapper .coupon-item .flex-left .check-box {
+  width: 36rpx;
+  height: 36rpx;
+  border-radius: 50%;
+  border: 2rpx solid #666;
+  margin-right: 20rpx;
+}
+
+.container .coupon-item-wrapper .coupon-item .flex-right {
+  display: flex;
+  font-size: 24rpx;
+  color: #999;
+  align-items: center;
+}
+
+.container .bottom-operator {
+  height: 88rpx;
+  display: flex;
+  background-color: #fff;
+}
+
+.container .bottom-operator .flex-left {
+  width: 550rpx;
+  display: flex;
+  align-items: center;
+  font-size: 32rpx;
+  padding-left: 30rpx;
+}
+
+.container .bottom-operator .flex-left .price {
+  color: #157658;
+  margin-left: 20rpx;
+}
+
+.container .bottom-operator .flex-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #157658;
+  font-size: 28rpx;
+  color: #FFF;
+}

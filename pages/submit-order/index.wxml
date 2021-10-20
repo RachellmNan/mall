@@ -1,0 +1,39 @@
+<view class="container">
+    <scroll-view scroll-y style="height:{{scrollHeight}}rpx">
+        <view class="scroll-box">
+            <view class="address-wrapper">
+                <view class="address-box">
+                    <m-icon name="shouhuodizhi" color="157658"></m-icon>
+                    <text >选择地址</text>
+                </view>
+            </view>
+            <view class="order-item-wrapper">
+                <m-order-item ></m-order-item>
+                <m-order-item ></m-order-item>
+                <m-order-item ></m-order-item>
+            </view>
+            <view class="coupon-wrapper">
+                <text class="left">优惠券</text>
+                <text class="right">可使用(3)</text>
+            </view> 
+            <view class="coupon-item-wrapper">
+                <view class="coupon-item">
+                    <view class="flex-left">
+                        <view class="check-box"></view>
+                        <text >满999减100</text>
+                    </view>
+                    <view class="flex-right">
+                        <text class="date">20121/6/30-20121/7/31</text>
+                    </view>
+                </view>
+            </view> 
+        </view>
+    </scroll-view>
+    <view class="bottom-operator">
+        <view class="flex-left">
+            <text >合计</text>
+            <text class="price">¥ 127</text>
+        </view>
+        <view class="flex-right">提交订单</view>
+    </view>
+</view>

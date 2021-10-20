@@ -59,6 +59,18 @@
                     "pathName": "pages/my/index",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "submit-order",
+                    "pathName": "pages/submit-order/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "order-list",
+                    "pathName": "pages/order-list/index",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

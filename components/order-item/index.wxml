@@ -1,0 +1,17 @@
+<view class="container">
+    <view class="image-box">
+        <image src="/assets/imgs/test.png" />
+    </view>
+    <view class="felx-left">
+        <view class="flex-sub-top">
+            <text class="title">北欧简约立式台灯北欧简约立式台灯北欧简约</text>
+            <view class="price-wrapper">
+                <text class="price">¥ 298</text>
+                <text class="count">x 1</text>
+            </view>
+        </view>
+        <view class="flex-sub-bottom">
+            <text >3M；黑色；可调节</text>
+        </view>
+    </view>
+</view>

@@ -8,7 +8,10 @@
         "pages/my/index",
         "pages/search/index",
         "pages/themeF/index",
-        "pages/themeH/index"
+        "pages/themeH/index",
+        "pages/submit-order/index",
+        "pages/order-list/index",
+        "pages/order-detail/index"
     ],
     "window": {
         "backgroundTextStyle": "light",

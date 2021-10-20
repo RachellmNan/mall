@@ -1,0 +1,47 @@
+.container{
+    background-color: #fff;
+    padding: 30rpx 30rpx 10rpx;
+    display: flex;
+    .image-box{
+        margin-right: 20rpx;
+        height: 120rpx;
+        image{
+            width: 120rpx;
+            height: 100%;
+        };
+    }
+    .felx-left{
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        position: relative;
+        .flex-sub-top{
+            display: flex;
+            justify-content: space-between;
+            .title{
+                max-width: 440rpx;
+                font-size: 24rpx;
+                color: #333;
+            }
+            .price-wrapper{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                font-size: 24rpx;
+                color: #333;
+                .count{
+                    font-size: 24rpx;
+                    color: #999;
+                }
+            }
+        }
+        .flex-sub-bottom{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: #F3F3F3;
+            padding: 8rpx;
+            font-size: 20rpx;
+        }
+    }
+}
