@@ -71,6 +71,12 @@
                     "pathName": "pages/order-list/index",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "order-detail",
+                    "pathName": "pages/order-detail/index",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

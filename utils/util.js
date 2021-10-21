@@ -51,9 +51,26 @@ function transpose(matrix) {
 // 青芒色 圣斗士 大号L
 // 橘黄色 七龙珠 小号s
 
+function _combination(arr, size){
+    var r =[]
+    function _(t, a, n){
+        if(n===0){
+            r[r.length] = t
+            return 
+        }
+        for(var i = 0,l=a.length - n;i<=l; i++){
+            var b = t.slice()
+            b.push(a[i])
+            _(b, a.slice(i+1),n-1)
+        }
+    }
+    _([], arr, size)
+    return r
+}
 
 module.exports = {
     _promisic,
     getHeight,
-    transpose
+    transpose,
+    _combination
 }

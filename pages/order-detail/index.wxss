@@ -1,1 +1,56 @@
-/* pages/order-detail/index.wxss */
+.container .declare-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0 30rpx;
+  margin: 20rpx 0;
+  background-color: #fff;
+}
+
+.container .declare-wrapper .declare-item {
+  display: flex;
+  line-height: 74rpx;
+  justify-content: space-between;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.container .declare-wrapper .declare-item .number {
+  font-size: 24rpx;
+  color: #333;
+}
+
+.container .order-wrapper {
+  background-color: #fff;
+  padding-bottom: 20rpx;
+}
+
+.container .flex-bottom {
+  margin-top: 2rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 86rpx;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 30rpx;
+  font-size: 24rpx;
+  color: #666;
+}
+
+.container .flex-bottom .price {
+  font-size: 32rpx;
+  color: #333;
+  margin-left: 4rpx;
+}
+
+.container .flex-bottom .flex-bottom-right {
+  color: #157658;
+  background-color: #DCEBE6;
+  font-size: 24rpx;
+  padding: 12rpx;
+}

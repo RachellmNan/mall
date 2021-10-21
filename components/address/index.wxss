@@ -1,0 +1,26 @@
+.container {
+  height: 156rpx;
+  display: flex;
+  background-color: #F6FBF9;
+  padding: 24rpx 0 0 30rpx;
+  border-top: 2rpx solid #F5F5F5;
+}
+
+.container .address-info {
+  margin-left: 22rpx;
+}
+
+.container .address-info .flex-top {
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 20rpx;
+}
+
+.container .address-info .flex-top text {
+  margin-right: 10rpx;
+}
+
+.container .address-info .flex-bottom {
+  font-size: 24rpx;
+  color: #999;
+}

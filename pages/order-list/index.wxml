@@ -1,2 +1,35 @@
-<!--pages/order-list/index.wxml-->
-<text>pages/order-list/index.wxml</text>
+<view class="container">
+    <view class="tab-wrapper">
+        <view class="tab-item {{currentId == 0 ? 'selected' : ''}}" data-id="0" bind:tap="onTap">
+            <text class="">全部</text>
+        </view>
+        <view class="tab-item {{currentId == 1 ? 'selected' : ''}}" data-id="1" bind:tap="onTap">
+            <text >已完成</text>
+        </view>
+        <view class="tab-item {{currentId == 2 ? 'selected' : ''}}" data-id="2" bind:tap="onTap">
+            <text >待发货</text>
+        </view>
+        <view class="tab-item {{currentId == 3 ? 'selected' : ''}}" data-id="3" bind:tap="onTap">
+            <text >待收货</text>
+        </view>
+        <view class="tab-item {{currentId == 4 ? 'selected' : ''}}" data-id="4" bind:tap="onTap">
+            <text >评价</text>
+        </view>
+    </view>
+    <view class="order-item-wrapper">
+        <view class="flex-top">
+            <text >2019-7-20  14:23:06</text>
+            <text >已完成</text>
+        </view>
+        <m-order-item></m-order-item>
+        <view class="flex-bottom">
+            <view class="flex-bottom-left">
+                <text >共2件商品，实付</text>
+                <text class="price"> ¥536</text>
+            </view>
+            <view class="flex-bottom-right">
+                <text >再来一单</text>
+            </view>
+        </view>
+    </view>
+</view>

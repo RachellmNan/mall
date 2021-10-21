@@ -15,6 +15,10 @@ Component({
             type:Object,
             value: {}
         },
+        judger:{
+            type: Object,
+            value:null
+        },
         title: String
     },
 
@@ -23,7 +27,10 @@ Component({
     },
 
     methods: {
-
+        onCell(event){
+            let cell = event.detail.cell
+            console.log('点击cell：', cell)
+        }
     },
     lifetimes:{
         attached(){

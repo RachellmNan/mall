@@ -1,4 +1,5 @@
 const FenceGroup = require("../../components/models/fence-group")
+const Judger = require("../../components/models/judger")
 const Spu = require("../../models/Spu")
 const { getSpuDetail } = require("../../models/Spu")
 const { getHeight } = require("../../utils/util")
@@ -8,7 +9,9 @@ Page({
     data: {
         spu:{},
         realmTitle: '加入购物车',
-        showMask: false
+        showMask: false,
+        judger: null,
+        fenceGroup: null
     },
 
     async onLoad(options) {
@@ -17,12 +20,20 @@ Page({
         let scrollHeight = getHeight(100)
         console.log('spu: ',spu)
         let explain = await Spu.getExplain()
-        let fenceGroup = new FenceGroup(spu.sku_list)
+        this._initRealm(spu)
         this.setData({
             spu,
             explain,
-            scrollHeight,
-            fenceGroup
+            scrollHeight
+        })
+    },
+    _initRealm(spu){
+        let fenceGroup = new FenceGroup(spu.sku_list)
+        let judger = new Judger(fenceGroup)
+        console.log('judger: ', judger)
+        this.setData({
+            fenceGroup,
+            judger
         })
     },
 

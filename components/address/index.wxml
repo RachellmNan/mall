@@ -1,0 +1,12 @@
+<view class="container">
+    <m-icon name="shouhuodizhi"></m-icon>
+    <view class="address-info">
+        <view class="flex-top">
+            <text >呱呱</text>
+            <text >15008222612</text>
+        </view>
+        <view class="flex-bottom">
+            <text >上海市 静安区 南京东路250号太阳新城</text>
+        </view>
+    </view>
+</view>

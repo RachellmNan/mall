@@ -1,2 +1,25 @@
-<!--pages/order-detail/index.wxml-->
-<text>pages/order-detail/index.wxml</text>
+<view class="container">
+    <m-address></m-address>
+    <view class="declare-wrapper">
+        <view class="declare-item">
+            <text >订单编号</text>
+            <text class="number">9123351875</text>
+        </view>
+        <view class="declare-item">
+            <text >下单时间</text>
+            <text class="number">2019-06-11 17:31:27</text>
+        </view>
+    </view>
+    <view class="order-wrapper">
+        <m-order-item></m-order-item>
+    </view>
+    <view class="flex-bottom">
+        <view class="flex-bottom-left">
+            <text >共2件商品，实付</text>
+            <text class="price"> ¥536</text>
+        </view>
+        <view class="flex-bottom-right">
+            <text >再来一单</text>
+        </view>
+    </view>
+</view>

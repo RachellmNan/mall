@@ -18,7 +18,7 @@
                 </view>
             </view>
             <view class="fence">
-                <m-fence wx:for="{{fenceGroup.fences}}" wx:key="index" fence="{{item}}"></m-fence>
+                <m-fence wx:for="{{fenceGroup.fences}}" wx:key="index" fence="{{item}}" x="{{index}}" bind:onCell="onCell"></m-fence>
             </view>
             <view class="count-wrapper">
                 <text class="count-title">购买数量</text>

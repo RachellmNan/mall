@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+      "m-address": "/components/address/index",
+      "m-order-item": "/components/order-item/index"
+  }
 }
