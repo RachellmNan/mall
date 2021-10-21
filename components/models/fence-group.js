@@ -20,7 +20,6 @@ class FenceGroup{
             let fence = new Fence(sub_matrix)
             this.fences.push(fence)
         })
-        console.log('FenceGroup: ', this)
     }
 }
 
