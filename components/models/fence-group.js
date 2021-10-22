@@ -2,12 +2,13 @@ const { transpose } = require("../../utils/util");
 const Fence = require("./fence");
 
 class FenceGroup{
-    skuList
+    spu
     fences = []
-
-    constructor(skuList){
-        this.skuList = skuList
-        this._init(skuList)
+    skuList
+    constructor(spu){
+        this.spu = spu
+        this.skuList = spu.sku_list
+        this._init(this.skuList)
     }
 
     _init(skuList){
@@ -16,8 +17,8 @@ class FenceGroup{
             matrix.push(sku.specs)
         });
         matrix = transpose(matrix)
-        matrix.forEach(sub_matrix=>{
-            let fence = new Fence(sub_matrix)
+        matrix.forEach((sub_matrix,index)=>{
+            let fence = new Fence(sub_matrix, index)
             this.fences.push(fence)
         })
     }
