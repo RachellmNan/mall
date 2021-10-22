@@ -20,20 +20,10 @@ Page({
         let scrollHeight = getHeight(100)
         console.log('spu: ',spu)
         let explain = await Spu.getExplain()
-        this._initRealm(spu)
         this.setData({
             spu,
             explain,
             scrollHeight
-        })
-    },
-    _initRealm(spu){
-        let fenceGroup = new FenceGroup(spu.sku_list)
-        let judger = new Judger(fenceGroup)
-        console.log('judger: ', judger)
-        this.setData({
-            fenceGroup,
-            judger
         })
     },
 

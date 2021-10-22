@@ -41,7 +41,7 @@
         "useCompilerPlugins": false
     },
     "compileType": "miniprogram",
-    "libVersion": "2.18.1",
+    "libVersion": "2.20.0",
     "appid": "wxf58d7cd7ccd36bdc",
     "projectname": "mall",
     "debugOptions": {

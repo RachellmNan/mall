@@ -7,14 +7,6 @@ Component({
         cell:{
             type: Object,
             value: {}
-        },
-        x:{
-            type: Number,
-            value: 0
-        },
-        y:{
-            type: Number,
-            value: 0
         }
     },
     observers:{
@@ -40,14 +32,7 @@ Component({
             let cell = this.data.cell
             if(cell.status == 'forbidden'){
                 return
-            }else if(cell.status == 'waiting'){
-                cell.status = 'selected'
-            }else{
-                cell.status = 'waiting'
             }
-            cell.x = this.properties.x
-            cell.y = this.properties.y
-
             this.setData({
                 cell
             })

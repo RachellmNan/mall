@@ -63,5 +63,5 @@
         </view>
     </view>
     <view class="mask" wx:if="{{showMask}}" bind:tap="closeRealm"></view>
-    <m-realm wx:if="{{showMask}}" title="{{realmTitle}}" fenceGroup="{{judger.fenceGroup}}" spu="{{spu}}"></m-realm>
+    <m-realm wx:if="{{showMask}}" mark="{{realmTitle}}" spu="{{spu}}"></m-realm>
 </view>

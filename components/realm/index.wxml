@@ -2,23 +2,23 @@
     <scroll-view scroll-y style="height:826rpx">
         <view class="scroll-wrapper">
             <view class="goods-detail">
-                <image src="{{spu.img}}" />
+                <image src="{{img}}" />
                 <view class="detail-info">
-                    <view class="title">橘黄色·七龙珠</view>
+                    <view class="title">{{title}}</view>
                     <view class="tip-wrapper">
                         <view class="tip-top">
-                            <text class="disprice">¥ {{spu.discount_price ? spu.discount_price : spu.price}}</text>
-                            <text class="price" wx:if="{{spu.discount_price}}">¥ {{spu.price}}</text>
-                            <text class="rest">库存: 999件</text>
+                            <text class="disprice">¥ {{disprice ? disprice : price}}</text>
+                            <text class="price" wx:if="{{disprice}}">¥ {{price}}</text>
+                            <text class="rest">库存: {{stock}}件</text>
                         </view>
                         <view class="tip-bottom">
-                            请选择：<text class="tip">颜色，图案，尺码</text>
+                            <text >{{isIntact?'已选择':'请选择'}}</text>：<text class="tip">{{tip}}</text>
                         </view>
                     </view>
                 </view>
             </view>
             <view class="fence">
-                <m-fence wx:for="{{fenceGroup.fences}}" wx:key="index" fence="{{item}}" x="{{index}}" bind:onCell="onCell"></m-fence>
+                <m-fence wx:for="{{judger.fenceGroup.fences}}" wx:key="index" fence="{{item}}"  bind:onCell="onCell"></m-fence>
             </view>
             <view class="count-wrapper">
                 <text class="count-title">购买数量</text>
@@ -27,6 +27,6 @@
         </view>
     </scroll-view>
     <view class="command">
-        {{title}}
+        {{mark}}
     </view>
 </view>
